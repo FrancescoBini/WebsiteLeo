@@ -142,25 +142,30 @@ a:hover {
 /* ==== PROJECT PAGE CSS ==== */
 /* ========================== */
 
-.project-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    align-items: center;
-    padding: 40px 0;
-}
-
-/* Left Side */
+/* Left Side (Title & Description) */
 .project-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    width: 45%; /* Ensures same width for title & description */
+    padding: 30px; /* Adds breathing space */
 }
 
+/* Title Styling */
+.project-left h1 {
+    font-size: 42px; /* Bigger for prominence */
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 15px; /* Space between title & description */
+}
+
+/* Description Styling */
+.project-left p {
+    font-size: 18px; /* Larger for readability */
+    text-align: left;
+    line-height: 1.6; /* Better spacing between lines */
+    max-width: 100%;
+}
 /* Right Side */
 .project-right {
     display: flex;
