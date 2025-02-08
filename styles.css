@@ -169,7 +169,7 @@ a:hover {
     gap: 10px;
 }
 
-/* Large Image */
+/* Large Main Image */
 .main-image img {
     width: 100%;
     height: auto;
@@ -180,11 +180,16 @@ a:hover {
 .secondary-images {
     display: flex;
     justify-content: space-between;
+    gap: 10px; /* Creates space between the two images */
     width: 100%;
 }
 
+.secondary-image {
+    flex: 1; /* Makes sure both images take equal width */
+}
+
 .secondary-image img {
-    width: 48%;
+    width: 100%; /* Makes images stretch to fill their containers */
     height: auto;
     display: block;
 }
