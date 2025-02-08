@@ -54,40 +54,67 @@ a:hover {
 /* ========================== */
 /* ==== LANDING PAGE CSS ==== */
 /* ========================== */
-
+/* Landing Page Layout */
 .landing-container {
-    text-align: center;
-}
-
-/* Project Grid */
-.projects-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr 1fr; /* Two equal sections */
+    height: 100vh; /* Full viewport height */
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Left Section */
+.landing-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+/* Title */
+.landing-left h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* About Text */
+.landing-left .about {
+    font-size: 20px;
+    text-align: left;
+}
+
+/* Projects List */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+}
+
+.projects-list a {
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+}
+
+.projects-list a:hover {
+    color: #007BFF;
+}
+
+/* Right Section (Image occupies full height) */
+.landing-right {
+    display: flex;
     justify-content: center;
-    margin-top: 40px;
+    align-items: center;
 }
 
-/* Individual Project Items */
-.project-item {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Project Image */
-.project-item img {
+.landing-right img {
     width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fully covers the section */
 }
 
 /* ========================== */
